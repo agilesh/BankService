@@ -4,8 +4,8 @@ import java.util.List;
 
 interface Service
 {
-	public Account deposit(int amount);
-	public Account withdraw(int amount);
+	public Account deposit(double amount);
+	public Account withdraw(double amount);
 	public int getbalance();
 	public int emptybalance();
 	
@@ -16,8 +16,8 @@ interface Service
 
 public class AccountService implements Service {
 	
-	private static int account=0;
-	public Account deposit(int amount)
+	private static double account=0.0;
+	public Account deposit(double amount)
 	{
 		
 		account +=amount;
@@ -26,7 +26,7 @@ public class AccountService implements Service {
 	}
 
 	@Override
-	public Account withdraw(int amount) {
+	public Account withdraw(double amount) {
 		
 	 account -=amount;
 	 return null;
